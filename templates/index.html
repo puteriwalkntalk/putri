@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Board Girly 💕</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      color: #4a4a4a;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #6c757d;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: transform 0.3s;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card label {
+      display: block;
+      margin-top: 10px;
+      background-color: #f48fb1;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card label:hover {
+      background-color: #ec407a;
+    }
+
+    /* Checkbox untuk toggle deskripsi */
+    .card input[type="checkbox"] {
+      display: none;
+    }
+
+    .card .deskripsi {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      font-size: 0.95em;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .card input:checked ~ .deskripsi {
+      max-height: 100px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>🌷 My Mood Board</h1>
+  <p>Inspirasi cantik untuk hari-hari yang manis 💅</p>
+
+  <div class="gallery">
+
+    <!-- Kartu 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1589887098250-c8f3bc0b77a7" alt="Coffee Time">
+      <div class="card-content">
+        <strong>Coffee & Chill</strong><br>
+        <input type="checkbox" id="desc1">
+        <label for="desc1">Lihat Deskripsi</label>
+        <div class="deskripsi">
+          Waktu terbaik adalah saat pagi dengan kopi dan cahaya matahari yang hangat ☕✨
+        </div>
+      </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600185365312-1d61f79b2a18" alt="Pink Flowers">
+      <div class="card-content">
+        <strong>Blossom Vibes</strong><br>
+        <input type="checkbox" id="desc2">
+        <label for="desc2">Lihat Deskripsi</label>
+        <div class="deskripsi">
+          Keindahan bunga itu seperti hati yang lembut: tumbuh dalam ketenangan 🌸
+        </div>
+      </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1528756514091-dee5ecaa3278" alt="Makeup Set">
+      <div class="card-content">
+        <strong>Makeup Mood</strong><br>
+        <input type="checkbox" id="desc3">
+        <label for="desc3">Lihat Deskripsi</label>
+        <div class="deskripsi">
+          Makeup bukan menyembunyikan, tapi mengekspresikan 💋💄
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
